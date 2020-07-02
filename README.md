@@ -1,2 +1,2 @@
 # resume
-个人介绍www.wuyu.com
+个人介绍www.wuyu.work
