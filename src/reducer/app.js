@@ -1,18 +1,12 @@
 
 import {createReducer} from './model'
 
-const namespace = "project";
+const namespace = "app";
 const state = {
-    name: "project",
-    age: 22
+    curMenu: "self"
 }
 export default {
     namespace,
     state,
     reducer: createReducer(state, namespace)
 }
-
-
-
-
-

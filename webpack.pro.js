@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require("clean-webpack-plugin") 
 
 module.exports = {
-    mode: "development",
+    mode: "production",
     devtool: "source-map",
     entry: {
         main: './src/index.js'
@@ -13,13 +13,6 @@ module.exports = {
         filename: '[name].[hash:6].js',
         path: path.resolve(__dirname, 'build'),
         publicPath: '/'
-    },
-    devServer: {
-        contentBase: path.join(__dirname, "build"),
-        compress: true,
-        port: 80,
-        disableHostCheck: true,
-        historyApiFallback: true,
     },
     resolve: {
         alias: {
