@@ -12,11 +12,14 @@ module.exports = {
     output: {
         filename: '[name].[hash:6].js',
         path: path.resolve(__dirname, 'build'),
+        publicPath: '/'
     },
     devServer: {
         contentBase: path.join(__dirname, "build"),
         compress: true,
-        port: 80
+        port: 80,
+        disableHostCheck: true,
+        historyApiFallback: true,
     },
     module: {
         rules: [
@@ -30,7 +33,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 //exclude: /(node_modules|bower_components)/,//某些CSS在node_modules
-                use: ['style-loaedr', 'css-loader']
+                loader: 'style-loader!css-loader'
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,

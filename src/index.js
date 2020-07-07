@@ -1,11 +1,8 @@
-const test = () => {
-    debugger;
-    const a = {
-        b: 1
-    }
-    const c = {
-        d: 2
-    }
-    console.log({...a,...c});
-}
-test();
+import React from 'react';
+import ReactDom from 'react-dom';
+import 'antd/dist/antd.css'
+import APP from './app';
+
+console.log(APP);
+
+ReactDom.render(<APP/>, document.getElementById('root'))
