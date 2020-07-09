@@ -63,7 +63,7 @@ class Main extends React.Component {
                             style={{ height: '100%', borderRight: 0 }}
                             onClick={({item, key, keyPath, domEvent}) => { this.menuChange(item, key, keyPath, domEvent) }}
                         >
-                            <SubMenu key="sub" icon={<UserOutlined />} title={curMenu}>
+                            <SubMenu key="sub" icon={<UserOutlined />} title={""}>
                                 <Menu.Item key="self">个人介绍</Menu.Item>
                                 <Menu.Item key="project">项目经历</Menu.Item>
                             </SubMenu>
