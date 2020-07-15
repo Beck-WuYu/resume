@@ -45,6 +45,7 @@ class Main extends React.Component {
                 return <Self/>
         }
     }
+    
     render() {
         const {curMenu, location} = this.props;
         const {pathname}  = location;
