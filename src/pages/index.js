@@ -52,7 +52,7 @@ class Main extends React.Component {
         return (
             <Layout className="layout" style={{ height: "100%" }}>
                 <Header>
-                    <Avatar size="large" src={userLogo} />
+                    {/* <Avatar size="large" src={userLogo} /> */}
                 </Header>
                 <Layout>
                     <Sider width={200} className="site-layout-background">
