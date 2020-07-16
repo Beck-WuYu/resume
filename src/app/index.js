@@ -6,8 +6,11 @@ import { DatePicker } from 'antd';
 import { createStore, combineReducers } from 'redux'
 import { browserHistory } from 'react-router-dom'
 import Route from './route'
+import {flow} from '../reducer/app'
 
 const rootReducer = combineReducers(getReducers());
+
+
 
 const store = createStore(rootReducer, undefined);
 

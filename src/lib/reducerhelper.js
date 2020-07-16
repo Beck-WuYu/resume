@@ -1,4 +1,4 @@
- const presetReducer = {
+const presetReducer = {
     //普通更新
     change: (state, { payload }) => {
         return { ...state, ...payload };

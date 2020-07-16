@@ -1,5 +1,5 @@
 
-import {createReducer} from './model'
+import {createReducer} from '../lib/reducerhelper'
 
 const namespace = "project";
 const state = {
