@@ -1,7 +1,13 @@
 import React from 'react';
-import ReactDom from 'react-dom';
-import 'antd/dist/antd.css'
-import APP from './app';
-import "@css/main.css"
+import 'antd/dist/antd.css';
+import "@css/main.css";
+import {createApp} from './framework/core';
+import Route from './app/route';
+import AppModel from './model/app';
+import ProjectModel from './model/project';
+import ResumeModel from './model/resume';
+const app = createApp({
+    models: [AppModel, ProjectModel, ResumeModel]
+});
 
-ReactDom.render(<APP/>, document.getElementById('root'))
+app.start(<Route/>, "#root");

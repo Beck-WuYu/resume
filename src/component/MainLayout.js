@@ -6,6 +6,7 @@ import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/
 import userLogo from '@css/beckwu.png'
 import { withRouter} from 'react-router-dom'
 
+
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 

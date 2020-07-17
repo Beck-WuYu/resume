@@ -4,9 +4,20 @@ import userLogo from '@css/beckwu.png'
 //import MainLayout from  '@component/MainLayout'
 import { GithubOutlined, EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons'
 const { Meta } = Card;
+import { connect } from 'react-redux'
 
-export default class Self extends React.Component {
+class Self extends React.Component {
+    componentDidMount = () => {
+        const {dispatch} = this.props;
+        dispatch({
+            type: "resume/setResumeName",
+            payload: {
+                name: "吴宇(beckwu)"
+            }
+        })
+    }
     render() {
+        const {name} = this.props;
         return (
             <div className="self-main">
                 <Card
@@ -18,7 +29,7 @@ export default class Self extends React.Component {
                 >
                     <Meta
                         avatar={<Avatar src={userLogo} />}
-                        title="吴宇"
+                        title={name}
                         style={{ fontSize: "16px" }}
                         description={<>
                             <Row align={"middle"} gutter={[24, 10]}>
@@ -64,5 +75,10 @@ export default class Self extends React.Component {
         )
     }
 }
+export default connect((state)=> {
+    return {
+        name: state.resume.name
+    }
+})(Self)
 
 
